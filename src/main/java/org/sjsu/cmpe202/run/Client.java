@@ -33,7 +33,7 @@ public class Client {
       if (inputFile1.getName().endsWith("csv")) {
           System.out.println("Input file 1 is csv");
       } else if (inputFile1.getName().endsWith("json")) {
-          System.out.println("Input file 1 is csv");
+          System.out.println("Input file 1 is json");
       } else if (inputFile1.getName().endsWith("xml")) {
             System.out.println("Input file 1 is xml");
       }
