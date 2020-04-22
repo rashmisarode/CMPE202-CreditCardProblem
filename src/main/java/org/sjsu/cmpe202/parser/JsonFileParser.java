@@ -21,10 +21,10 @@ public class JsonFileParser extends FileParser {
     public List<Record> parse(String inputFile) {
         List<Record> result = new ArrayList<>();
 
-        String csvFile = inputFile;
+        String jsonFile = inputFile;
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader(csvFile));
+            Object obj = parser.parse(new FileReader(jsonFile));
 
             // A JSON object. Key value pairs are unordered. JSONObject supports java.util.Map interface.
            // JSONObject jsonObject = (JSONObject) obj;

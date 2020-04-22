@@ -1,1 +1,22 @@
-[{"CardNumber":"5410000000000000","CardType":"null","Error":"None"},{"CardNumber":"4120000000000","CardType":"null","Error":"None"},{"CardNumber":"341000000000000","CardType":"null","Error":"None"},{"CardNumber":"6010000000000000","CardType":"null","Error":"None"}]
+[
+  {
+    "CardNumber":"5410000000000000",
+    "CardType":"null",
+    "Error":"None"
+  },
+  {
+    "CardNumber":"4120000000000",
+    "CardType":"null",
+    "Error":"None"
+  },
+  {
+    "CardNumber":"341000000000000",
+    "CardType":"null",
+    "Error":"None"
+  },
+  {
+    "CardNumber":"6010000000000000",
+    "CardType":"null",
+    "Error":"None"
+  }
+]
