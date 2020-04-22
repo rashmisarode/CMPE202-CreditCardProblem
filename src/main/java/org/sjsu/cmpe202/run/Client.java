@@ -1,7 +1,12 @@
 package org.sjsu.cmpe202.run;
 
+import org.sjsu.cmpe202.CCType;
 import org.sjsu.cmpe202.Record;
+import org.sjsu.cmpe202.handler.MasterCardHandler;
 import org.sjsu.cmpe202.parser.CsvFileParser;
+import org.sjsu.cmpe202.parser.FileParser;
+import org.sjsu.cmpe202.parser.JsonFileParser;
+import org.sjsu.cmpe202.parser.XmlFileParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,6 +15,22 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Client {
+
+    // Default Parser
+    private FileParser fileParser = new CsvFileParser();
+
+    public FileParser getFileParser() {
+        return fileParser;
+    }
+
+
+    public void setParsingStrategy(String inputFile) {
+        if(inputFile.endsWith("json")) {
+            this.fileParser = new JsonFileParser();
+        } else if(inputFile.endsWith("xml")) {
+            this.fileParser = new XmlFileParser();
+        }
+    }
 
     public static void main(String args[]) throws IOException {
       System.out.println(" Args Length" +args.length);
@@ -21,8 +42,8 @@ public class Client {
       System.out.println(" args[0]="+inputPath);
       System.out.println(" args[1]="+outputPath);
 
-      File inputFile1 = new File(inputPath);
-      if (!inputFile1.exists()) {
+      File inputFile = new File(inputPath);
+      if (!inputFile.exists()) {
          throw new FileNotFoundException(inputPath+" is not valid file, and does not exist");
       }
       File outputFile = new File(outputPath);
@@ -30,22 +51,18 @@ public class Client {
           //outputFile.mkdirs();
           outputFile.createNewFile();
       }
-      if (inputFile1.getName().endsWith("csv")) {
-          System.out.println("Input file 1 is csv");
-      } else if (inputFile1.getName().endsWith("json")) {
-          System.out.println("Input file 1 is json");
-      } else if (inputFile1.getName().endsWith("xml")) {
-            System.out.println("Input file 1 is xml");
-      }
 
-      CsvFileParser csvFileParser = new CsvFileParser();
-      List<Record> result = csvFileParser.parse(inputFile1.getAbsolutePath());
-        System.out.println();
-        for(int i=0; i<result.size(); i++) {
-            System.out.println(result.get(i));
-        }
-        csvFileParser.write(result, outputFile.getAbsolutePath());
+      Client client = new Client();
+      client.setParsingStrategy(inputFile.getAbsolutePath());
 
+      List<Record> result = client.getFileParser().parse(inputFile.getAbsolutePath());
+      // invoke the code to find the card type
+        CCType ccType = new MasterCardHandler();
+        result.forEach(record -> {
+            ccType.verifyCardAndProcess(record);
+        });
+
+      client.getFileParser().write(result, outputFile.getAbsolutePath());
     }
 
 }

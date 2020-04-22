@@ -10,16 +10,17 @@ public class Record {
 
    Long ccNumberLong;
 
-   CCType ccType = null;
+   String ccType = null;
 
    String error = "None";
 
    public Record(Integer recordID, String ccNumberStr, String expDate, String ccHolderName) {
       this.recordID = recordID;
-      this.ccNumberStr = ccNumberStr;
+
       this.expDate = expDate;
       this.ccHolderName = ccHolderName;
       try{
+         this.ccNumberStr = ccNumberStr.trim();
          this.ccNumberLong = new BigDecimal(ccNumberStr).longValue();
       }
       catch(Exception e){
@@ -45,11 +46,11 @@ public class Record {
       return ccHolderName;
    }
 
-   public CCType getCcType() {
+   public String getCcType() {
       return ccType;
    }
 
-   public void setCcType(CCType ccType) {
+   public void setCcType(String ccType) {
       this.ccType = ccType;
    }
 

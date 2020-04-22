@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class JsonFileParser extends FileParser {
+public class JsonFileParser implements FileParser {
     @Override
     public List<Record> parse(String inputFile) {
         List<Record> result = new ArrayList<>();

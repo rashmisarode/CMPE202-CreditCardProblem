@@ -5,7 +5,6 @@ import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvValidationException;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.RecordBuilder;
-import org.sjsu.cmpe202.parser.format.CSVFIleFormat;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,12 +14,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvFileParser extends FileParser {
+public class CsvFileParser implements FileParser {
 
     public CsvFileParser() {
-        this.fileFormat = new CSVFIleFormat();
     }
-
 
     @Override
     public List<Record> parse(String inputFile) {
@@ -82,4 +79,6 @@ public class CsvFileParser extends FileParser {
             }
         }
     }
+
+
 }

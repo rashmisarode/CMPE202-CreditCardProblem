@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XmlFileParser extends FileParser {
+public class XmlFileParser implements FileParser {
     @Override
     public List<Record> parse(String inputFile) {
         List<Record> result = new ArrayList<>();
