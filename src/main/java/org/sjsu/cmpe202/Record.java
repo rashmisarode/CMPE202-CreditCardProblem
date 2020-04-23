@@ -17,13 +17,14 @@ public class Record {
    public Record(Integer recordID, String ccNumberStr, String expDate, String ccHolderName) {
       this.recordID = recordID;
 
-      this.expDate = expDate;
-      this.ccHolderName = ccHolderName;
-      try{
+      try {
+         this.expDate = expDate;
+         this.ccHolderName = ccHolderName;
+
          this.ccNumberStr = ccNumberStr.trim();
          this.ccNumberLong = new BigDecimal(ccNumberStr).longValue();
       }
-      catch(Exception e){
+      catch(Exception e) {
          setError("InvalidCardNumber");
       }
 
@@ -31,7 +32,9 @@ public class Record {
    }
 
    public String getCcNumberLongStr() {
-      return ccNumberLong.toString();
+      if(ccNumberLong!=null) {
+         return ccNumberLong.toString();
+      } else return null;
    }
 
    public Integer getRecordID() {
