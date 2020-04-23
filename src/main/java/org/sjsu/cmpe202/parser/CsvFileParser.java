@@ -17,8 +17,8 @@ import java.util.List;
 
 public class CsvFileParser implements FileParser {
 
-    public CsvFileParser() {
-    }
+    //public CsvFileParser() {
+    //}
 
     @Override
     public List<Record> parse(String inputFile) {
