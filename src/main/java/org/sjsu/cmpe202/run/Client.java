@@ -5,7 +5,7 @@ import org.sjsu.cmpe202.CreditCard;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.handler.MasterCardHandler;
 import org.sjsu.cmpe202.parser.CsvFileParser;
-import org.sjsu.cmpe202.parser.FileParser;
+import org.sjsu.cmpe202.FileParser;
 import org.sjsu.cmpe202.parser.JsonFileParser;
 import org.sjsu.cmpe202.parser.XmlFileParser;
 
@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Client {

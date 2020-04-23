@@ -1,10 +1,10 @@
 package org.sjsu.cmpe202.parser;
 
 import com.cedarsoftware.util.io.JsonWriter;
-import org.apache.commons.lang3.reflect.FieldUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.sjsu.cmpe202.FileParser;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.RecordBuilder;
 

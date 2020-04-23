@@ -3,6 +3,7 @@ package org.sjsu.cmpe202.parser;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvValidationException;
+import org.sjsu.cmpe202.FileParser;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.RecordBuilder;
 

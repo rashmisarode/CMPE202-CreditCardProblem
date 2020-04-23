@@ -1,4 +1,4 @@
-package org.sjsu.cmpe202.parser;
+package org.sjsu.cmpe202;
 
 import org.sjsu.cmpe202.Record;
 

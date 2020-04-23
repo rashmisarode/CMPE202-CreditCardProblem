@@ -1,5 +1,6 @@
 package org.sjsu.cmpe202.parser;
 
+import org.sjsu.cmpe202.FileParser;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.RecordBuilder;
 import org.w3c.dom.*;
