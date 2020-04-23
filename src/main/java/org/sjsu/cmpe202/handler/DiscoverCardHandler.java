@@ -14,7 +14,7 @@ public class DiscoverCardHandler extends CCType {
 
     @Override
     public CreditCard process(Record record) {
-        String ccNumber = record.getCcNumberStr();
+        String ccNumber = record.getCcNumberLongStr();
 
         if (ccNumber.startsWith("6011") && ccNumber.length() == 16) {
             record.setCcType("Discover");

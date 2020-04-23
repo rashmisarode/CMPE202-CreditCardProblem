@@ -14,14 +14,13 @@ public class VisaCardHandler extends CCType {
 
     @Override
     public CreditCard process(Record record) {
-        String ccNumber = record.getCcNumberStr();
+        String ccNumber = record.getCcNumberLongStr();
 
         if ((ccNumber.charAt(0) == '4') && (( ccNumber.length()==13) || (ccNumber.length()==16))) {
             record.setCcType("Visa");
             return new VisaCreditCard(record);
         } else {
-            this.next.process(record);
+            return this.next.process(record);
         }
-        return null;
     }
 }

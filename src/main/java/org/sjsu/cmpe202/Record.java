@@ -30,6 +30,10 @@ public class Record {
 
    }
 
+   public String getCcNumberLongStr() {
+      return ccNumberLong.toString();
+   }
+
    public Integer getRecordID() {
       return recordID;
    }

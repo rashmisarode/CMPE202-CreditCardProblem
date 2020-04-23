@@ -1,6 +1,7 @@
 package org.sjsu.cmpe202.run;
 
 import org.sjsu.cmpe202.CCType;
+import org.sjsu.cmpe202.CreditCard;
 import org.sjsu.cmpe202.Record;
 import org.sjsu.cmpe202.handler.MasterCardHandler;
 import org.sjsu.cmpe202.parser.CsvFileParser;
@@ -11,6 +12,7 @@ import org.sjsu.cmpe202.parser.XmlFileParser;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -58,11 +60,15 @@ public class Client {
       List<Record> result = client.getFileParser().parse(inputFile.getAbsolutePath());
       // invoke the code to find the card type
         CCType ccType = new MasterCardHandler();
-        result.forEach(record -> {
-            ccType.verifyCardAndProcess(record);
-        });
 
+        List<CreditCard> creditCards = new ArrayList<>();
+        result.forEach(record -> {
+            CreditCard cc = ccType.verifyCardAndProcess(record);
+            creditCards.add(cc);
+        });
       client.getFileParser().write(result, outputFile.getAbsolutePath());
+
+
     }
 
 }

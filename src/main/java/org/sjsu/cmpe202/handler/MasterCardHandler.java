@@ -15,7 +15,7 @@ public class MasterCardHandler extends CCType {
 
     @Override
     public CreditCard process(Record record) {
-        String ccNumber = record.getCcNumberStr();
+        String ccNumber = record.getCcNumberLongStr();
         char second = ccNumber.charAt(1);
         int sec = Integer.parseInt(second+"");
 
@@ -23,8 +23,7 @@ public class MasterCardHandler extends CCType {
             record.setCcType("MasterCard");
             return new MasterCreditCard(record);
         } else {
-            this.next.process(record);
+            return this.next.process(record);
         }
-        return null;
     }
 }

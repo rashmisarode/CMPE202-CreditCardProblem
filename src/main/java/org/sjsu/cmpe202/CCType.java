@@ -12,7 +12,7 @@ public abstract class CCType {
     public abstract CreditCard process(Record record);
 
     public CreditCard verifyCardAndProcess(Record record) {
-        if (record.getCcNumberStr().length() > 19) {
+        if (record.getCcNumberLongStr().length() > 19) {
             record.setCcType("Invalid");
             record.setError("InvalidCardNumber");
             return null;
