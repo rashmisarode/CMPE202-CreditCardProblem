@@ -25,11 +25,6 @@ public class JsonFileParser implements FileParser {
         JSONParser parser = new JSONParser();
         try {
             Object obj = parser.parse(new FileReader(jsonFile));
-
-            // A JSON object. Key value pairs are unordered. JSONObject supports java.util.Map interface.
-           // JSONObject jsonObject = (JSONObject) obj;
-
-            // A JSON array. JSONObject supports java.util.List interface.
             JSONArray cards = (JSONArray) obj;
             int count = 1;
             Iterator<JSONObject> iterator = cards.iterator();
