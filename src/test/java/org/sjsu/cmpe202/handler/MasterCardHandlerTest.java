@@ -34,9 +34,11 @@ public class MasterCardHandlerTest {
                 .withCcNumber("541000000000000")
                 .withExpDate("3/20/2030")
                 .build();
+
         MasterCardHandler masterCardHandler = new MasterCardHandler();
 
         CreditCard creditCard =  masterCardHandler.verifyCardAndProcess(record);
+        Assert.assertEquals(record.getExpDateObj().toString(), "Wed Mar 20 00:00:00 PDT 2030");
         Assert.assertTrue(creditCard == null);
         Assert.assertTrue(record.getError() == "InvalidCardNumber");
         Assert.assertEquals(record.getCcType(), "Invalid");

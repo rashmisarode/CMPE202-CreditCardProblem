@@ -18,9 +18,16 @@ public class MasterCardHandler extends CCType {
         char second = ccNumber.charAt(1);
         int sec = Integer.parseInt(second+"");
 
-        if ((ccNumber.charAt(0) == '5') && ((sec>=1) && (sec<=5)) && (ccNumber.length()==16)) {
-            record.setCcType("MasterCard");
-            return new MasterCreditCard(record);
+        if (ccNumber.charAt(0) == '5') {
+            if (((sec>=1) && (sec<=5)) && (ccNumber.length()==16)){
+                record.setCcType("MasterCard");
+                return new MasterCreditCard(record);
+            } else {
+                record.setCcType("Invalid");
+                record.setError("InvalidCardNumber");
+                return null;
+            }
+
         } else {
             return this.next.process(record);
         }

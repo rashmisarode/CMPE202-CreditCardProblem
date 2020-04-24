@@ -1,12 +1,16 @@
 package org.sjsu.cmpe202;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Record {
    Integer recordID;
    String ccNumberStr;
    String expDate;
+   Date expDateObj;
    String ccHolderName;
+
 
    Long ccNumberLong;
 
@@ -28,6 +32,11 @@ public class Record {
          setError("InvalidCardNumber");
       }
 
+      try {
+        this.expDateObj = new SimpleDateFormat("MM/dd/yyyy").parse(expDate);
+      } catch(Exception e) {
+
+      }
 
    }
 
@@ -67,6 +76,14 @@ public class Record {
 
    public void setError(String error) {
       this.error = error;
+   }
+
+   public Date getExpDateObj() {
+      return expDateObj;
+   }
+
+   public void setExpDateObj(Date expDateObj) {
+      this.expDateObj = expDateObj;
    }
 
    @Override

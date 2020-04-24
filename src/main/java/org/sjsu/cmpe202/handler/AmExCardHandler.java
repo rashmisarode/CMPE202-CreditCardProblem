@@ -17,9 +17,15 @@ public class AmExCardHandler extends CCType {
         String ccNumber = record.getCcNumberLongStr();
         char second = ccNumber.charAt(1);
 
-        if ((ccNumber.charAt(0) == '3') && ( (second=='4') || (second=='7')) && (ccNumber.length()==15)) {
-            record.setCcType("AmericanExpress");
-            return new AmExCreditCard(record);
+        if (ccNumber.charAt(0) == '3') {
+            if (((second=='4') || (second=='7')) && (ccNumber.length()==15)){
+                record.setCcType("AmericanExpress");
+                return new AmExCreditCard(record);
+            } else{
+                record.setCcType("Invalid");
+                record.setError("InvalidCardNumber");
+                return null;
+            }
         } else {
             return this.next.process(record);
         }

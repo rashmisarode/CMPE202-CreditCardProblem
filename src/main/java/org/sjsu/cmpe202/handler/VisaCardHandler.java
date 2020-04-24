@@ -16,9 +16,16 @@ public class VisaCardHandler extends CCType {
     public CreditCard process(Record record) {
         String ccNumber = record.getCcNumberLongStr();
 
-        if ((ccNumber.charAt(0) == '4') && (( ccNumber.length()==13) || (ccNumber.length()==16))) {
-            record.setCcType("Visa");
-            return new VisaCreditCard(record);
+        if (ccNumber.charAt(0) == '4') {
+            if (( ccNumber.length()==13) || (ccNumber.length()==16)){
+                record.setCcType("Visa");
+                return new VisaCreditCard(record);
+            } else {
+                record.setCcType("Invalid");
+                record.setError("InvalidCardNumber");
+                return null;
+            }
+
         } else {
             return this.next.process(record);
         }
