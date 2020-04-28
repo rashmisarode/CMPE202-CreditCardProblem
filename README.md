@@ -1,4 +1,4 @@
-# individual-project-rashmisarode
+# CMPE202-Individual-Project
 individual-project-rashmisarode created by GitHub Classroom
 
 Individual-Project part2 is included in the "individual-project-part2" folder.
