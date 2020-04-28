@@ -1,4 +1,4 @@
 mvn clean install
-mvn exec:java -Dexec.mainClass="org.sjsu.cmpe202.run.Client" -Dexec.args="src/main/resources/Sample.csv src/main/resources/SampleOutput.csv"
-mvn exec:java -Dexec.mainClass="org.sjsu.cmpe202.run.Client" -Dexec.args="src/main/resources/Sample.json src/main/resources/SampleOutput.json"
-mvn exec:java -Dexec.mainClass="org.sjsu.cmpe202.run.Client" -Dexec.args="src/main/resources/Sample.xml src/main/resources/SampleOutput.xml"
+java -jar target/CMPE202-Indiv-Proj-1.0-SNAPSHOT-jar-with-dependencies.jar src/main/resources/Sample.csv output/SampleOut.csv
+java -jar target/CMPE202-Indiv-Proj-1.0-SNAPSHOT-jar-with-dependencies.jar src/main/resources/Sample.json output/SampleOut.json
+java -jar target/CMPE202-Indiv-Proj-1.0-SNAPSHOT-jar-with-dependencies.jar src/main/resources/Sample.xml output/SampleOut.xml
