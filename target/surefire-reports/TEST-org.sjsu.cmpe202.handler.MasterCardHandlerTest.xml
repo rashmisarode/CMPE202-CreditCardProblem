@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0.022" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire/surefirebooter6564920948033511716.jar /home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire 2020-04-27T18-43-17_266-jvmRun1 surefire11948753096145562233tmp surefire_02031326512667259914tmp"/>
+    <property name="sun.java.command" value="/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire/surefirebooter5741269425920362783.jar /home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire 2020-04-27T19-11-20_089-jvmRun1 surefire7986647847548669464tmp surefire_02755980919511710977tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/test-classes:/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/classes:/home/rashmisarode/.m2/repository/com/opencsv/opencsv/5.1/opencsv-5.1.jar:/home/rashmisarode/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/home/rashmisarode/.m2/repository/org/apache/commons/commons-text/1.8/commons-text-1.8.jar:/home/rashmisarode/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/rashmisarode/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/rashmisarode/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/rashmisarode/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/rashmisarode/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:/home/rashmisarode/.m2/repository/com/cedarsoftware/json-io/4.12.0/json-io-4.12.0.jar:/home/rashmisarode/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/rashmisarode/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire/surefirebooter6564920948033511716.jar"/>
+    <property name="surefire.real.class.path" value="/home/rashmisarode/IdeaProjects/CMPE202-Individual-Project/target/surefire/surefirebooter5741269425920362783.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.7+10-post-Ubuntu-2ubuntu218.04"/>
     <property name="user.name" value="rashmisarode"/>
@@ -57,8 +57,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testInvalidCardNumberLength" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0.009"/>
-  <testcase name="testValidMasterCard" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0.001"/>
-  <testcase name="testNullEntry" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0.001"/>
-  <testcase name="testInvalidMasterCard" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0.001"/>
+  <testcase name="testInvalidCardNumberLength" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0"/>
+  <testcase name="testValidMasterCard" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0"/>
+  <testcase name="testNullEntry" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0"/>
+  <testcase name="testInvalidMasterCard" classname="org.sjsu.cmpe202.handler.MasterCardHandlerTest" time="0"/>
 </testsuite>

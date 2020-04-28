@@ -19,7 +19,9 @@ public final class RecordBuilder {
     }
 
     public RecordBuilder withCcNumber(String ccNumber) {
-        this.ccNumber = ccNumber;
+        if(ccNumber!=null) {
+            this.ccNumber = ccNumber.trim();
+        }
         return this;
     }
 

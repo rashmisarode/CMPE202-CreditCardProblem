@@ -21,7 +21,7 @@ public class AmExCardHandler extends CCType {
             if (((second=='4') || (second=='7')) && (ccNumber.length()==15)){
                 record.setCcType("AmericanExpress");
                 return new AmExCreditCard(record);
-            } else{
+            } else {
                 record.setCcType("Invalid");
                 record.setError("InvalidCardNumber");
                 return null;

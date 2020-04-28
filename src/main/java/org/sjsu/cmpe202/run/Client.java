@@ -45,7 +45,7 @@ public class Client {
 
       File inputFile = new File(inputPath);
       if (!inputFile.exists()) {
-         throw new FileNotFoundException(inputPath+" is not valid file, and does not exist");
+         throw new FileNotFoundException(inputPath+" is not valid file, and does not exist. Please check the path of the input file !! ");
       }
       File outputFile = new File(outputPath);
       if (!outputFile.exists()) {
