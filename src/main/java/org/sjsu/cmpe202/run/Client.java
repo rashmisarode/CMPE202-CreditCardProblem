@@ -50,6 +50,10 @@ public class Client {
       File outputFile = new File(outputPath);
       if (!outputFile.exists()) {
           //outputFile.mkdirs();
+          File parentDir = outputFile.getParentFile();
+          if (!parentDir.exists()) {
+              parentDir.mkdirs();
+          }
           outputFile.createNewFile();
       }
 
